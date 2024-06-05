@@ -40,6 +40,7 @@ class DataManager:
                 'iataCode': city['iataCode']
             }
             }
+            #editing each row in sheet
             response = requests.put(url=f"{sheety_url}/{city['id']}",json=new_data)
 
             print(response.text)
